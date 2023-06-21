@@ -6,3 +6,4 @@ export interface IAlumnos{
     "pago":number;
     "foto":string;
 }
+
