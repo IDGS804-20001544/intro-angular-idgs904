@@ -26,21 +26,27 @@
                 <th>Edad</th>
                 <th>Correo</th>
                 <th>Pago</th>
+                <th>Calificacion</th>
+                <th></th>
                 <th><button (click)="showImagen()" class="btn btn-primary">
                     {{muestraImg? 'Oculta ':'Muestra '}}Imagen</button></th>
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let alumno of alumnosIric">
+            <tr *ngFor="let alumno of alumnosIric| alumnosFilter:listFilter">
                 <td>{{alumno.matricula}}</td>
-                <td>{{alumno.nombre}}</td>
-                <td>{{alumno.edad}}</td>
+                <td>{{alumno.nombre | uppercase}}</td>
+                <td>{{alumno.edad }}</td>
                 <td>{{alumno.correo}}</td>
-                <td>{{alumno.pago}}</td>
+                <td>{{alumno.pago|currency}}</td>
+                <td>{{alumno.calificacion}}</td>
+                <td><app-calificacion-alumn [califica]="alumno.calificacion"></app-calificacion-alumn></td>  
                 <td><img *ngIf="muestraImg" [src]="alumno.foto"
                     [title]="alumno.nombre"
                     [style.width.px]="imageWidth"
                     [style.margin.px]="imageMargin"></td>
+                  
+                   
             </tr>
         </tbody>
       </table>  

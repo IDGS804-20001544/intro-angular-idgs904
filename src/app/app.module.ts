@@ -11,6 +11,8 @@ import { SumarComponent } from './escuela/formularios/sumar/sumar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { OperasModule } from './escuela/formularios/operas/operas.module';
 import { MatButtonModule } from '@angular/material/button';
+import { AlumnosFilterPipe } from './escuela/alumnos-filter.pipe';
+import { CalificacionAlumnComponent } from './escuela/calificacion-alumn/calificacion-alumn.component';
 
 
 
@@ -23,6 +25,8 @@ import { MatButtonModule } from '@angular/material/button';
     IricComponent,
     MenuComponent,
     SumarComponent,
+    AlumnosFilterPipe,
+    CalificacionAlumnComponent,
   ],
   imports: [
     BrowserModule,
