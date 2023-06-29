@@ -26,7 +26,7 @@
                 <th>Edad</th>
                 <th>Correo</th>
                 <th>Pago</th>
-                <th>Calificacion</th>
+                <th>Calificacion{{alumnoTitle}}</th>
                 <th></th>
                 <th><button (click)="showImagen()" class="btn btn-primary">
                     {{muestraImg? 'Oculta ':'Muestra '}}Imagen</button></th>
@@ -40,7 +40,7 @@
                 <td>{{alumno.correo}}</td>
                 <td>{{alumno.pago|currency}}</td>
                 <td>{{alumno.calificacion}}</td>
-                <td><app-calificacion-alumn [califica]="alumno.calificacion"></app-calificacion-alumn></td>  
+                <td><app-calificacion-alumn (calificaClick)="onCalificaClick($event)" [califica]="alumno.calificacion"></app-calificacion-alumn></td>  
                 <td><img *ngIf="muestraImg" [src]="alumno.foto"
                     [title]="alumno.nombre"
                     [style.width.px]="imageWidth"

@@ -6,13 +6,14 @@ import { escuelaComponent } from './escuela/escuela.component';
 import { AlumnosIevn } from './escuela/ievn.components';
 import { IricComponent } from './escuela/iric/iric.component';
 import { MenuComponent } from './escuela/menu/menu.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SumarComponent } from './escuela/formularios/sumar/sumar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { OperasModule } from './escuela/formularios/operas/operas.module';
 import { MatButtonModule } from '@angular/material/button';
 import { AlumnosFilterPipe } from './escuela/alumnos-filter.pipe';
 import { CalificacionAlumnComponent } from './escuela/calificacion-alumn/calificacion-alumn.component';
+import { AlumnoReactiveComponent } from './formularios/alumno-reactive/alumno-reactive.component';
 
 
 
@@ -27,13 +28,15 @@ import { CalificacionAlumnComponent } from './escuela/calificacion-alumn/calific
     SumarComponent,
     AlumnosFilterPipe,
     CalificacionAlumnComponent,
+    AlumnoReactiveComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     BrowserAnimationsModule,
     OperasModule,
-    MatButtonModule
+    MatButtonModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
