@@ -14,6 +14,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { AlumnosFilterPipe } from './escuela/alumnos-filter.pipe';
 import { CalificacionAlumnComponent } from './escuela/calificacion-alumn/calificacion-alumn.component';
 import { AlumnoReactiveComponent } from './formularios/alumno-reactive/alumno-reactive.component';
+import { AppRoutingModule } from './app.routing.module';
 
 
 
@@ -36,7 +37,8 @@ import { AlumnoReactiveComponent } from './formularios/alumno-reactive/alumno-re
     BrowserAnimationsModule,
     OperasModule,
     MatButtonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
